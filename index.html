@@ -1,0 +1,918 @@
+‎<!DOCTYPE html>
+‎<html lang="fr">
+‎<head>
+‎<meta charset="UTF-8">
+‎<meta name="viewport" content="width=device-width, initial-scale=1.0">
+‎
+‎<title>Sénégal Tourisme 🇸🇳</title>
+‎
+‎<style>
+‎:root {
+‎    --vert: #087f3f;
+‎    --vert-fonce: #045c2d;
+‎    --vert-clair: #e8f7ee;
+‎    --or: #f5c542;
+‎    --blanc: #ffffff;
+‎    --gris: #f4f6f5;
+‎    --texte: #17221b;
+‎    --danger: #b42318;
+‎    --orange: #c45a00;
+‎}
+‎
+‎* {
+‎    box-sizing: border-box;
+‎    margin: 0;
+‎    padding: 0;
+‎}
+‎
+‎body {
+‎    font-family: Arial, Helvetica, sans-serif;
+‎    background: var(--gris);
+‎    color: var(--texte);
+‎    line-height: 1.6;
+‎}
+‎
+‎/* HEADER */
+‎header {
+‎    background: linear-gradient(135deg, #045c2d, #0b9348);
+‎    color: white;
+‎    padding: 35px 20px;
+‎    text-align: center;
+‎}
+‎
+‎header h1 {
+‎    font-size: 42px;
+‎    margin-bottom: 8px;
+‎}
+‎
+‎header p {
+‎    font-size: 18px;
+‎}
+‎
+‎.flag {
+‎    font-size: 35px;
+‎}
+‎
+‎/* NAVIGATION */
+‎nav {
+‎    background: #ffffff;
+‎    box-shadow: 0 2px 10px rgba(0,0,0,.1);
+‎    position: sticky;
+‎    top: 0;
+‎    z-index: 1000;
+‎}
+‎
+‎nav ul {
+‎    display: flex;
+‎    justify-content: center;
+‎    flex-wrap: wrap;
+‎    list-style: none;
+‎}
+‎
+‎nav a {
+‎    display: block;
+‎    padding: 15px 18px;
+‎    color: var(--vert-fonce);
+‎    text-decoration: none;
+‎    font-weight: bold;
+‎}
+‎
+‎nav a:hover {
+‎    background: var(--vert-clair);
+‎}
+‎
+‎/* CONTENEUR */
+‎.container {
+‎    width: 92%;
+‎    max-width: 1250px;
+‎    margin: auto;
+‎}
+‎
+‎section {
+‎    padding: 45px 0;
+‎}
+‎
+‎.section-title {
+‎    text-align: center;
+‎    color: var(--vert-fonce);
+‎    margin-bottom: 30px;
+‎    font-size: 30px;
+‎}
+‎
+‎/* RECHERCHE */
+‎.search-box {
+‎    background: white;
+‎    padding: 25px;
+‎    margin: 30px auto;
+‎    border-radius: 15px;
+‎    box-shadow: 0 3px 15px rgba(0,0,0,.08);
+‎}
+‎
+‎.search-box input,
+‎.search-box select {
+‎    width: 100%;
+‎    padding: 14px;
+‎    border: 1px solid #ddd;
+‎    border-radius: 8px;
+‎    margin-bottom: 12px;
+‎    font-size: 16px;
+‎}
+‎
+‎.search-grid {
+‎    display: grid;
+‎    grid-template-columns: 2fr 1fr;
+‎    gap: 15px;
+‎}
+‎
+‎/* CARTES */
+‎.grid {
+‎    display: grid;
+‎    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+‎    gap: 22px;
+‎}
+‎
+‎.card {
+‎    background: white;
+‎    border-radius: 15px;
+‎    overflow: hidden;
+‎    box-shadow: 0 4px 15px rgba(0,0,0,.08);
+‎    transition: .25s;
+‎}
+‎
+‎.card:hover {
+‎    transform: translateY(-4px);
+‎}
+‎
+‎.card-image {
+‎    height: 170px;
+‎    background: linear-gradient(135deg, #0b9348, #74c69d);
+‎    display: flex;
+‎    justify-content: center;
+‎    align-items: center;
+‎    font-size: 55px;
+‎}
+‎
+‎.card-content {
+‎    padding: 20px;
+‎}
+‎
+‎.card h3 {
+‎    color: var(--vert-fonce);
+‎    margin-bottom: 8px;
+‎}
+‎
+‎.card p {
+‎    margin-bottom: 8px;
+‎}
+‎
+‎.tag {
+‎    display: inline-block;
+‎    padding: 5px 10px;
+‎    border-radius: 20px;
+‎    background: var(--vert-clair);
+‎    color: var(--vert-fonce);
+‎    font-size: 13px;
+‎    font-weight: bold;
+‎    margin: 3px;
+‎}
+‎
+‎/* BOUTONS */
+‎.btn {
+‎    display: inline-block;
+‎    border: none;
+‎    border-radius: 8px;
+‎    padding: 10px 15px;
+‎    margin: 5px 3px 0 0;
+‎    text-decoration: none;
+‎    cursor: pointer;
+‎    font-weight: bold;
+‎}
+‎
+‎.btn-green {
+‎    background: var(--vert);
+‎    color: white;
+‎}
+‎
+‎.btn-green:hover {
+‎    background: var(--vert-fonce);
+‎}
+‎
+‎.btn-gold {
+‎    background: var(--or);
+‎    color: #222;
+‎}
+‎
+‎.btn-danger {
+‎    background: var(--danger);
+‎    color: white;
+‎}
+‎
+‎/* SECURITE */
+‎.security {
+‎    background: #fff7e6;
+‎    border-left: 6px solid var(--orange);
+‎    padding: 25px;
+‎    border-radius: 10px;
+‎    margin-top: 20px;
+‎}
+‎
+‎.security h3 {
+‎    color: var(--orange);
+‎    margin-bottom: 10px;
+‎}
+‎
+‎.warning {
+‎    background: #fdecec;
+‎    border-left: 5px solid var(--danger);
+‎    padding: 15px;
+‎    margin: 10px 0;
+‎}
+‎
+‎/* HISTOIRE */
+‎.history {
+‎    background: var(--vert-clair);
+‎    border-radius: 15px;
+‎    padding: 25px;
+‎}
+‎
+‎/* TABLE */
+‎.table-wrapper {
+‎    overflow-x: auto;
+‎}
+‎
+‎table {
+‎    width: 100%;
+‎    border-collapse: collapse;
+‎    background: white;
+‎    border-radius: 10px;
+‎    overflow: hidden;
+‎}
+‎
+‎th {
+‎    background: var(--vert-fonce);
+‎    color: white;
+‎    padding: 13px;
+‎}
+‎
+‎td {
+‎    padding: 13px;
+‎    border-bottom: 1px solid #ddd;
+‎}
+‎
+‎tr:hover {
+‎    background: var(--vert-clair);
+‎}
+‎
+‎/* FOOTER */
+‎footer {
+‎    background: #04351b;
+‎    color: white;
+‎    text-align: center;
+‎    padding: 35px 20px;
+‎    margin-top: 40px;
+‎}
+‎
+‎footer a {
+‎    color: #9be7b7;
+‎}
+‎
+‎/* MOBILE */
+‎@media(max-width: 700px) {
+‎    header h1 {
+‎        font-size: 30px;
+‎    }
+‎
+‎    .search-grid {
+‎        grid-template-columns: 1fr;
+‎    }
+‎
+‎    nav a {
+‎        padding: 10px;
+‎        font-size: 14px;
+‎    }
+‎}
+‎</style>
+‎</head>
+‎
+‎<body>
+‎
+‎<header>
+‎    <div class="flag">🇸🇳</div>
+‎    <h1>Sénégal Tourisme</h1>
+‎    <p>Découvrir • Voyager • Dormir • Explorer • Comprendre l'histoire</p>
+‎</header>
+‎
+‎<nav>
+‎<ul>
+‎    <li><a href="#sites">Sites touristiques</a></li>
+‎    <li><a href="#histoire">Histoire</a></li>
+‎    <li><a href="#dakar">Dakar</a></li>
+‎    <li><a href="#hotels">Hôtels</a></li>
+‎    <li><a href="#securite">Sécurité</a></li>
+‎</ul>
+‎</nav>
+‎
+‎<main class="container">
+‎
+‎<!-- RECHERCHE -->
+‎
+‎<div class="search-box">
+‎    <h2>🔎 Rechercher</h2>
+‎
+‎    <div class="search-grid">
+‎        <input
+‎            type="text"
+‎            id="search"
+‎            placeholder="Exemple : Gorée, hôtel, plage, Dakar..."
+‎            onkeyup="rechercher()"
+‎        >
+‎
+‎        <select id="categorie" onchange="rechercher()">
+‎            <option value="tous">Toutes les catégories</option>
+‎            <option value="tourisme">Tourisme</option>
+‎            <option value="histoire">Histoire</option>
+‎            <option value="dakar">Dakar</option>
+‎            <option value="hotel">Hôtels</option>
+‎            <option value="securite">Sécurité</option>
+‎        </select>
+‎    </div>
+‎</div>
+‎
+‎
+‎<!-- SITES TOURISTIQUES -->
+‎
+‎<section id="sites">
+‎<h2 class="section-title">🌴 Sites touristiques du Sénégal</h2>
+‎
+‎<div class="grid">
+‎
+‎<div class="card recherche tourism">
+‎<div class="card-image">🏝️</div>
+‎<div class="card-content">
+‎<h3>Île de Gorée</h3>
+‎<span class="tag">Histoire</span>
+‎<span class="tag">UNESCO</span>
+‎<p>Île historique située au large de Dakar, connue notamment pour la Maison des Esclaves et son patrimoine historique.</p>
+‎<a class="btn btn-green"
+‎href="https://www.google.com/maps/search/?api=1&query=Ile+de+Goree+Senegal"
+‎target="_blank">📍 Localiser</a>
+‎</div>
+‎</div>
+‎
+‎<div class="card recherche tourism">
+‎<div class="card-image">🗿</div>
+‎<div class="card-content">
+‎<h3>Monument de la Renaissance Africaine</h3>
+‎<span class="tag">Dakar</span>
+‎<span class="tag">Monument</span>
+‎<p>Grand monument situé à Ouakam, surplombant Dakar.</p>
+‎<a class="btn btn-green"
+‎href="https://www.google.com/maps/search/?api=1&query=Monument+Renaissance+Africaine+Dakar"
+‎target="_blank">📍 Localiser</a>
+‎</div>
+‎</div>
+‎
+‎<div class="card recherche tourism">
+‎<div class="card-image">🏛️</div>
+‎<div class="card-content">
+‎<h3>Musée des Civilisations Noires</h3>
+‎<span class="tag">Culture</span>
+‎<span class="tag">Dakar</span>
+‎<p>Musée consacré aux civilisations et aux patrimoines africains.</p>
+‎<a class="btn btn-green"
+‎href="https://www.google.com/maps/search/?api=1&query=Musee+des+Civilisations+Noires+Dakar"
+‎target="_blank">📍 Localiser</a>
+‎</div>
+‎</div>
+‎
+‎<div class="card recherche tourism">
+‎<div class="card-image">🌊</div>
+‎<div class="card-content">
+‎<h3>Lac Rose</h3>
+‎<span class="tag">Nature</span>
+‎<span class="tag">Excursion</span>
+‎<p>Site naturel célèbre situé près de Dakar.</p>
+‎<a class="btn btn-green"
+‎href="https://www.google.com/maps/search/?api=1&query=Lac+Rose+Senegal"
+‎target="_blank">📍 Localiser</a>
+‎</div>
+‎</div>
+‎
+‎<div class="card recherche tourism">
+‎<div class="card-image">🏜️</div>
+‎<div class="card-content">
+‎<h3>Désert de Lompoul</h3>
+‎<span class="tag">Désert</span>
+‎<span class="tag">Aventure</span>
+‎<p>Dunes de sable et campements touristiques.</p>
+‎<a class="btn btn-green"
+‎href="https://www.google.com/maps/search/?api=1&query=Desert+de+Lompoul+Senegal"
+‎target="_blank">📍 Localiser</a>
+‎</div>
+‎</div>
+‎
+‎<div class="card recherche tourism">
+‎<div class="card-image">🦁</div>
+‎<div class="card-content">
+‎<h3>Parc national du Niokolo-Koba</h3>
+‎<span class="tag">Nature</span>
+‎<span class="tag">Faune</span>
+‎<p>Grande aire protégée du Sénégal, connue pour sa biodiversité.</p>
+‎<a class="btn btn-green"
+‎href="https://www.google.com/maps/search/?api=1&query=Niokolo-Koba+Senegal"
+‎target="_blank">📍 Localiser</a>
+‎</div>
+‎</div>
+‎
+‎<div class="card recherche tourism">
+‎<div class="card-image">🌿</div>
+‎<div class="card-content">
+‎<h3>Delta du Saloum</h3>
+‎<span class="tag">Nature</span>
+‎<span class="tag">Mangroves</span>
+‎<p>Région de bolongs, îles et mangroves.</p>
+‎<a class="btn btn-green"
+‎href="https://www.google.com/maps/search/?api=1&query=Delta+du+Saloum+Senegal"
+‎target="_blank">📍 Localiser</a>
+‎</div>
+‎</div>
+‎
+‎<div class="card recherche tourism">
+‎<div class="card-image">🐦</div>
+‎<div class="card-content">
+‎<h3>Parc national des oiseaux du Djoudj</h3>
+‎<span class="tag">Nature</span>
+‎<span class="tag">Oiseaux</span>
+‎<p>Zone humide importante pour les oiseaux migrateurs.</p>
+‎<a class="btn btn-green"
+‎href="https://www.google.com/maps/search/?api=1&query=Parc+National+des+Oiseaux+du+Djoudj"
+‎target="_blank">📍 Localiser</a>
+‎</div>
+‎</div>
+‎
+‎<div class="card recherche tourism">
+‎<div class="card-image">🏖️</div>
+‎<div class="card-content">
+‎<h3>Petite Côte</h3>
+‎<span class="tag">Plage</span>
+‎<span class="tag">Vacances</span>
+‎<p>Saly, Somone, Popenguine et les environs offrent de nombreuses plages et activités.</p>
+‎<a class="btn btn-green"
+‎href="https://www.google.com/maps/search/?api=1&query=Petite+Cote+Senegal"
+‎target="_blank">📍 Localiser</a>
+‎</div>
+‎</div>
+‎
+‎<div class="card recherche tourism">
+‎<div class="card-image">🌴</div>
+‎<div class="card-content">
+‎<h3>Casamance</h3>
+‎<span class="tag">Nature</span>
+‎<span class="tag">Culture</span>
+‎<p>Région connue pour ses paysages, sa culture et ses bolongs.</p>
+‎<a class="btn btn-green"
+‎href="https://www.google.com/maps/search/?api=1&query=Casamance+Senegal"
+‎target="_blank">📍 Localiser</a>
+‎</div>
+‎</div>
+‎
+‎</div>
+‎</section>
+‎
+‎
+‎<!-- HISTOIRE -->
+‎
+‎<section id="histoire">
+‎<h2 class="section-title">🏛️ Villes et lieux historiques</h2>
+‎
+‎<div class="grid">
+‎
+‎<div class="card recherche histoire">
+‎<div class="card-image">🏛️</div>
+‎<div class="card-content">
+‎<h3>Saint-Louis</h3>
+‎<p>Ancienne ville historique située au nord du Sénégal, avec un important patrimoine architectural.</p>
+‎</div>
+‎</div>
+‎
+‎<div class="card recherche histoire">
+‎<div class="card-image">🏝️</div>
+‎<div class="card-content">
+‎<h3>Gorée</h3>
+‎<p>Île historique au large de Dakar. La Maison des Esclaves constitue l'un de ses lieux mémoriels majeurs.</p>
+‎</div>
+‎</div>
+‎
+‎<div class="card recherche histoire">
+‎<div class="card-image">🕌</div>
+‎<div class="card-content">
+‎<h3>Touba</h3>
+‎<p>Ville religieuse fondée autour de la tradition mouride et de la Grande Mosquée de Touba.</p>
+‎</div>
+‎</div>
+‎
+‎<div class="card recherche histoire">
+‎<div class="card-image">🏙️</div>
+‎<div class="card-content">
+‎<h3>Rufisque</h3>
+‎<p>Ancienne ville portuaire de la région de Dakar, avec un patrimoine urbain ancien.</p>
+‎</div>
+‎</div>
+‎
+‎<div class="card recherche histoire">
+‎<div class="card-image">⛵</div>
+‎<div class="card-content">
+‎<h3>Joal-Fadiouth</h3>
+‎<p>Ville côtière connue notamment pour Fadiouth et son patrimoine culturel.</p>
+‎</div>
+‎</div>
+‎
+‎<div class="card recherche histoire">
+‎<div class="card-image">🏛️</div>
+‎<div class="card-content">
+‎<h3>Thiès</h3>
+‎<p>Ville historique de l'ouest du Sénégal, importante notamment pour son développement ferroviaire.</p>
+‎</div>
+‎</div>
+‎
+‎<div class="card recherche histoire">
+‎<div class="card-image">🌿</div>
+‎<div class="card-content">
+‎<h3>Tambacounda</h3>
+‎<p>Ville de l'est du Sénégal, située sur les routes vers le Sénégal oriental et le Niokolo-Koba.</p>
+‎</div>
+‎</div>
+‎
+‎<div class="card recherche histoire">
+‎<div class="card-image">🌊</div>
+‎<div class="card-content">
+‎<h3>Kaolack</h3>
+‎<p>Ville importante du bassin arachidier et carrefour commercial historique.</p>
+‎</div>
+‎</div>
+‎
+‎</div>
+‎
+‎<div class="history" style="margin-top:30px;">
+‎<h3>📖 Quelques repères historiques</h3>
+‎
+‎<p>
+‎Le Sénégal possède une histoire liée aux royaumes précoloniaux,
+‎aux échanges commerciaux, à l'histoire de l'Atlantique, à la colonisation,
+‎aux indépendances africaines et aux grandes traditions religieuses.
+‎</p>
+‎
+‎<p>
+‎Pour une visite historique, les endroits particulièrement intéressants
+‎comprennent Gorée, Saint-Louis, Rufisque, les musées de Dakar,
+‎ainsi que plusieurs anciennes villes et sites patrimoniaux du pays.
+‎</p>
+‎</div>
+‎
+‎</section>
+‎
+‎
+‎<!-- DAKAR -->
+‎
+‎<section id="dakar">
+‎
+‎<h2 class="section-title">🏙️ Quartiers de Dakar</h2>
+‎
+‎<div class="grid">
+‎
+‎<div class="card recherche dakar">
+‎<div class="card-image">🌊</div>
+‎<div class="card-content">
+‎<h3>Almadies</h3>
+‎<span class="tag">Touristique</span>
+‎<span class="tag">Restaurants</span>
+‎<p>Zone côtière avec restaurants, hôtels, plages et lieux de sortie.</p>
+‎</div>
+‎</div>
+‎
+‎<div class="card recherche dakar">
+‎<div class="card-image">🏖️</div>
+‎<div class="card-content">
+‎<h3>Ngor</h3>
+‎<span class="tag">Plage</span>
+‎<span class="tag">Tourisme</span>
+‎<p>Quartier côtier connu pour la plage et l'île de Ngor.</p>
+‎</div>
+‎</div>
+‎
+‎<div class="card recherche dakar">
+‎<div class="card-image">🏢</div>
+‎<div class="card-content">
+‎<h3>Plateau</h3>
+‎<span class="tag">Centre-ville</span>
+‎<span class="tag">Historique</span>
+‎<p>Centre administratif et historique de Dakar.</p>
+‎</div>
+‎</div>
+‎
+‎<div class="card recherche dakar">
+‎<div class="card-image">🌴</div>
+‎<div class="card-content">
+‎<h3>Fann</h3>
+‎<span class="tag">Résidentiel</span>
+‎<p>Quartier connu notamment pour ses établissements universitaires,
+‎hôtels et ambassades.</p>
+‎</div>
+‎</div>
+‎
+‎<div class="card recherche dakar">
+‎<div class="card-image">🏘️</div>
+‎<div class="card-content">
+‎<h3>Médina</h3>
+‎<span class="tag">Populaire</span>
+‎<span class="tag">Historique</span>
+‎<p>Un des quartiers historiques et très animés de Dakar.</p>
+‎</div>
+‎</div>
+‎
+‎<div class="card recherche dakar">
+‎<div class="card-image">✈️</div>
+‎<div class="card-content">
+‎<h3>Yoff</h3>
+‎<span class="tag">Populaire</span>
+‎<span class="tag">Côte</span>
+‎<p>Grande zone de Dakar comprenant notamment des secteurs résidentiels,
+‎commerciaux et côtiers.</p>
+‎</div>
+‎</div>
+‎
+‎<div class="card recherche dakar">
+‎<div class="card-image">🗿</div>
+‎<div class="card-content">
+‎<h3>Ouakam</h3>
+‎<span class="tag">Historique</span>
+‎<span class="tag">Tourisme</span>
+‎<p>Quartier situé près du Monument de la Renaissance Africaine.</p>
+‎</div>
+‎</div>
+‎
+‎<div class="card recherche dakar">
+‎<div class="card-image">🏘️</div>
+‎<div class="card-content">
+‎<h3>Mermoz</h3>
+‎<span class="tag">Résidentiel</span>
+‎<p>Quartier résidentiel situé dans l'ouest de Dakar.</p>
+‎</div>
+‎</div>
+‎
+‎<div class="card recherche dakar">
+‎<div class="card-image">🏙️</div>
+‎<div class="card-content">
+‎<h3>Point E</h3>
+‎<span class="tag">Résidentiel</span>
+‎<p>Quartier central avec logements, commerces et établissements.</p>
+‎</div>
+‎</div>
+‎
+‎<div class="card recherche dakar">
+‎<div class="card-image">🏘️</div>
+‎<div class="card-content">
+‎<h3>Liberté</h3>
+‎<span class="tag">Résidentiel</span>
+‎<span class="tag">Commerce</span>
+‎<p>Zone importante de l'agglomération dakaroise.</p>
+‎</div>
+‎</div>
+‎
+‎<div class="card recherche dakar">
+‎<div class="card-image">🏘️</div>
+‎<div class="card-content">
+‎<h3>Sacré-Cœur</h3>
+‎<span class="tag">Résidentiel</span>
+‎<p>Zone résidentielle et commerciale de Dakar.</p>
+‎</div>
+‎</div>
+‎
+‎<div class="card recherche dakar">
+‎<div class="card-image">🏘️</div>
+‎<div class="card-content">
+‎<h3>Grand Dakar</h3>
+‎<span class="tag">Populaire</span>
+‎<p>Quartier densément urbanisé de Dakar.</p>
+‎</div>
+‎</div>
+‎
+‎</div>
+‎</section>
+‎
+‎
+‎<!-- HOTELS -->
+‎
+‎<section id="hotels">
+‎
+‎<h2 class="section-title">🏨 Hôtels et hébergements</h2>
+‎
+‎<p style="text-align:center;margin-bottom:25px;">
+‎Les prix ci-dessous sont indicatifs. Vérifiez toujours le tarif
+‎au moment de réserver.
+‎</p>
+‎
+‎<div class="grid">
+‎
+‎<!-- MIRAMAR -->
+‎
+‎<div class="card recherche hotel">
+‎<div class="card-image">🏨</div>
+‎<div class="card-content">
+‎
+‎<h3>Hôtel Miramar Dakar</h3>
+‎
+‎<span class="tag">Dakar</span>
+‎<span class="tag">Centre-ville</span>
+‎
+‎<p><strong>Tarifs publiés :</strong></p>
+‎
+‎<p>
+‎Eco : 19 000 FCFA<br>
+‎Single : 30 000 FCFA<br>
+‎Double : 38 000 FCFA<br>
+‎Triple : 45 000 FCFA<br>
+‎Terrasse : 50 000 FCFA<br>
+‎Prestige : 60 000 FCFA
+‎</p>
+‎
+‎<p>📞 33 849 29 29</p>
+‎
+‎<a class="btn btn-green"
+‎href="tel:+221338492929">
+‎📞 Appeler
+‎</a>
+‎
+‎<a class="btn btn-gold"
+‎href="https://www.google.com/maps/search/?api=1&query=Hotel+Miramar+Dakar"
+‎target="_blank">
+‎📍 Carte
+‎</a>
+‎
+‎</div>
+‎</div>
+‎
+‎
+‎<!-- RADISSON -->
+‎
+‎<div class="card recherche hotel">
+‎
+‎<div class="card-image">🏨</div>
+‎
+‎<div class="card-content">
+‎
+‎<h3>Radisson Blu / Noom Hotel Dakar</h3>
+‎
+‎<span class="tag">5 étoiles</span>
+‎<span class="tag">Corniche</span>
+‎
+‎<p>Hôtel situé dans le secteur de Fann Résidence, sur la Corniche.</p>
+‎
+‎<p>📞 +221 33 869 33 33</p>
+‎
+‎<a class="btn btn-green"
+‎href="tel:+221338693333">
+‎📞 Appeler
+‎</a>
+‎
+‎<a class="btn btn-gold"
+‎href="https://www.google.com/maps/search/?api=1&query=Radisson+Blu+Dakar"
+‎target="_blank">
+‎📍 Carte
+‎</a>
+‎
+‎</div>
+‎</div>
+‎
+‎
+‎<!-- TERROU BI -->
+‎
+‎<div class="card recherche hotel">
+‎
+‎<div class="card-image">🏨</div>
+‎
+‎<div class="card-content">
+‎
+‎<h3>Terrou-Bi</h3>
+‎
+‎<span class="tag">5 étoiles</span>
+‎<span class="tag">Corniche</span>
+‎
+‎<p>Hôtel situé sur la Corniche Ouest.</p>
+‎
+‎<p>📞 +221 33 839 90 39</p>
+‎
+‎<a class="btn btn-green"
+‎href="tel:+221338399039">
+‎📞 Appeler
+‎</a>
+‎
+‎<a class="btn btn-gold"
+‎href="https://www.google.com/maps/search/?api=1&query=Terrou+Bi+Dakar"
+‎target="_blank">
+‎📍 Carte
+‎</a>
+‎
+‎</div>
+‎</div>
+‎
+‎
+‎<!-- PULLMAN -->
+‎
+‎<div class="card recherche hotel">
+‎
+‎<div class="card-image">🏨</div>
+‎
+‎<div class="card-content">
+‎
+‎<h3>Pullman Dakar Teranga</h3>
+‎
+‎<span class="tag">5 étoiles</span>
+‎<span class="tag">Plateau</span>
+‎
+‎<p>📍 Place de l'Indépendance, Plateau.</p>
+‎
+‎<p>📞 +221 33 849 49 94</p>
+‎
+‎<a class="btn btn-green"
+‎href="tel:+221338494994">
+‎📞 Appeler
+‎</a>
+‎
+‎<a class="btn btn-gold"
+‎href="https://www.google.com/maps/search/?api=1&query=Pullman+Dakar+Teranga"
+‎target="_blank">
+‎📍 Carte
+‎</a>
+‎
+‎</div>
+‎</div>
+‎
+‎
+‎<!-- KING FAHD -->
+‎
+‎<div class="card recherche hotel">
+‎
+‎<div class="card-image">🏨</div>
+‎
+‎<div class="card-content">
+‎
+‎<h3>King Fahd Palace</h3>
+‎
+‎<span class="tag">5 étoiles</span>
+‎<span class="tag">Almadies</span>
+‎
+‎<p>Hôtel situé dans le secteur des Almadies.</p>
+‎
+‎<p>📞 +221 33 869 69 69</p>
+‎
+‎<a class="btn btn-green"
+‎href="tel:+221338696969">
+‎📞 Appeler
+‎</a>
+‎
+‎<a class="btn btn-gold"
+‎href="https://www.google.com/maps/search/?api=1&query=King+Fahd+Palace+Dakar"
+‎target="_blank">
+‎📍 Carte
+‎</a>
+‎
+‎</div>
+‎</div>
+‎
+‎
+‎<!-- NOVOTEL -->
+‎
+‎<div class="card recherche hotel">
+‎
+‎<div class="card-image">🏨</div>
+‎
+‎<div class="card-content">
+‎
+‎<h3>Novotel Dakar</h3>
+‎
+‎<span class="tag">4 étoiles</span>
+‎<span class="tag">Plateau</span>
+‎
+‎<p>Hôtel situé au centre de Dakar.</p>
+‎
+‎<p>📞 +221 33 849 49 94</p>
+‎
+‎<a class="btn btn-green"
+‎href="tel:+221338494994">
+‎📞 Appeler
+‎</a>
+‎
+‎<a class="btn btn-gold"
+‎href="https://www.google.com/maps/search/?api=1&query=Novotel+Dakar"
+‎target="_blank">
+‎📍 Carte
+‎</a>
+‎
+‎</div>
+‎</div>
+‎
+‎
+‎<!-- NGOR DIARAMA -->
+‎
+‎<di
